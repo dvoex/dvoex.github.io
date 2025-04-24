@@ -6,6 +6,7 @@ I am a passionate and driven Cybersecurity Professional with a strong focus on S
 Please find me on the multiple links below;
 
 [LinkedIn](https://www.linkedin.com/in/dvoex)
+
 [Mail me](mailto:awe.davidoladayo@gmail.com)
 
 
