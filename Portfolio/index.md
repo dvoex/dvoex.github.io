@@ -1,3 +1,4 @@
+layout: default
 *DAVID O. A*
 
 
