@@ -12,4 +12,4 @@ Please find me on the multiple links below
 
 [View Active Directory Project (PDF)](pdfs/Ubuntu Server CLI cheat sheet 2024 v6.pdf)
 
-![Alt text](/images/cloud-security-engineer.png)
+![Alt text](images/cloud-security-engineer.png)
