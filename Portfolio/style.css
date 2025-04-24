@@ -36,3 +36,31 @@
 .nav-menu li a:hover {
   color: #2575fc;
 }
+nav {
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #0073e6; /* LinkedIn blue or your theme color */
+}
