@@ -389,3 +389,38 @@ body {
   background-color: #ffffff;
   color: #000000;
 }
+/* Default Light Mode Styles */
+body {
+    background-color: #ffffff; /* White background for light mode */
+    color: #000000; /* Black text for light mode */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for changes */
+}
+
+button {
+    background-color: #0077b5; /* Blue button background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text for dark mode */
+}
+
+body.dark-mode button {
+    background-color: #444444; /* Dark button background */
+    color: #ffffff;
+}
+
+/* Optional: Hover effect for the button */
+button:hover {
+    background-color: #005f8a;
+}
+
+body.dark-mode button:hover {
+    background-color: #666666;
+}
