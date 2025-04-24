@@ -16,10 +16,10 @@ toggleButton.addEventListener('click', () => {
 
     // Update button text based on the mode
     if (body.classList.contains('dark-mode')) {
-        toggleButton.textContent = '🌙 Dark/Light Mode ☀';  // Change text to "Switch to Light Mode" when dark mode is on
+        toggleButton.textContent = '🌙 Dark/Light Mode ☀';  // Change text to "🌙 Dark/Light Mode ☀" when dark mode is on
         localStorage.setItem('darkMode', 'enabled');  // Store dark mode preference in local storage
     } else {
-        toggleButton.textContent = '🌙 Dark/Light Mode ☀';  // Change text to "Switch to Dark Mode" when dark mode is off
+        toggleButton.textContent = '🌙 Dark/Light Mode ☀';  // Change text to "🌙 Dark/Light Mode ☀" when dark mode is off
         localStorage.setItem('darkMode', 'disabled');  // Store light mode preference in local storage
     }
 });
