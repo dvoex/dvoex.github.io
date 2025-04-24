@@ -64,3 +64,6 @@ nav {
 .navbar li a:hover {
   color: #0073e6; /* LinkedIn blue or your theme color */
 }
+html {
+  scroll-behavior: smooth;
+}
