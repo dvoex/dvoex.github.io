@@ -176,6 +176,29 @@ title: "David O. A's Portfolio"
         });
     });
 </script>
+<script>
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top < window.innerHeight && rect.bottom > 0
+        );
+    }
+
+    function handleScrollAnimation() {
+        const skillsItems = document.querySelectorAll('.skills-list li');
+
+        skillsItems.forEach(item => {
+            if (isElementInViewport(item)) {
+                item.classList.add('hovered');
+            } else {
+                item.classList.remove('hovered');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', handleScrollAnimation);
+    window.addEventListener('load', handleScrollAnimation);
+</script>
 
 
 </body>
