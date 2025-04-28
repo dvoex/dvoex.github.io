@@ -84,7 +84,7 @@ h2 {
     margin: 0 auto 30px;
 }
 
-/* Skills Section */
+/* Skills Section Heading */
 .skills-heading {
     font-size: 2.5rem;
     color: #2c3e50;
@@ -101,7 +101,7 @@ h2 {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around; /* Distribute items evenly */
     gap: 20px;
     padding: 0;
     margin: 0 auto;
@@ -110,7 +110,7 @@ h2 {
 
 .skills-list li {
     display: flex;
-    flex-direction: column; /* Stack the icon and text vertically */
+    flex-direction: column; /* Stack icon and text vertically */
     align-items: center;
     justify-content: center;
     background-color: #fff;
@@ -119,8 +119,8 @@ h2 {
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    width: 220px; /* Consistent width */
-    height: 230px; /* Ensures consistent height */
+    width: 220px; /* Set width to ensure consistent size */
+    height: 250px; /* Set height for consistent appearance */
     text-align: center;
     opacity: 0;
     transform: translateY(30px);
@@ -129,16 +129,14 @@ h2 {
 
 .skills-list li i {
     color: #3498db;
-    margin-bottom: 15px; /* Spacing between icon and text */
-    font-size: 3rem; /* Larger icon for better visibility */
-    display: block; /* Ensure icon is treated as a block element */
-    margin-bottom: 20px; /* Space between icon and text */
+    font-size: 3rem; /* Larger icon size for better visibility */
+    margin-bottom: 15px; /* Space between the icon and text */
 }
 
 .skills-list li strong {
     font-size: 1.2rem;
     font-weight: 600;
-    margin-bottom: 10px; /* Spacing between the title and description */
+    margin-bottom: 10px; /* Space between title and description */
 }
 
 .skills-list li p {
@@ -146,13 +144,13 @@ h2 {
     color: #666;
 }
 
-/* Hover effect */
-.skills-list li:hover {
+/* Hover Effect for Skills */
+.skills-list li.hovered {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-10px);
 }
 
-/* Slide-in animation */
+/* Slide-in Animation */
 @keyframes slideIn {
     to {
         opacity: 1;
@@ -160,32 +158,62 @@ h2 {
     }
 }
 
-/* Media Queries */
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     .skills-list ul {
-        justify-content: flex-start; /* Align items to the left for smaller screens */
+        justify-content: flex-start; /* Align items to the left */
     }
 
     .skills-list li {
-        width: 200px; /* Adjust width on smaller screens */
-        height: 210px;
+        width: 200px; /* Adjust width for smaller screens */
+        height: 230px;
     }
 }
 
 @media (max-width: 480px) {
     .skills-list ul {
-        justify-content: center; /* Center items on very small screens */
+        justify-content: center; /* Center items on smaller screens */
     }
 
     .skills-list li {
-        width: 160px; /* Adjust width */
-        height: 160px;
+        width: 160px; /* Adjust width for smaller mobile screens */
+        height: 190px;
     }
 
     .skills-list i {
-        font-size: 2.2rem;
+        font-size: 2.2rem; /* Adjust icon size on mobile */
+    }
+
+    .skills-list li strong {
+        font-size: 1rem; /* Adjust title size */
+    }
+
+    .skills-list li p {
+        font-size: 0.9rem; /* Adjust description size */
     }
 }
+
+/* JavaScript to Add Hover on Scroll */
+<script>
+    // Check if the skill items are in the viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    }
+
+    // Add 'hovered' class when element comes into view
+    window.addEventListener('scroll', function () {
+        const skillsItems = document.querySelectorAll('.skills-list li');
+        
+        skillsItems.forEach(item => {
+            if (isElementInViewport(item)) {
+                item.classList.add('hovered');
+            } else {
+                item.classList.remove('hovered');
+            }
+        });
+    });
+</script>
 
 /* Certifications Section */
 .certifications-list {
