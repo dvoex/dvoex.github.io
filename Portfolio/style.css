@@ -136,3 +136,50 @@ html {
 .resume-button:hover i {
   transform: translateX(5px);
 }
+#skills {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skills-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-list li {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-list li i {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #007bff; /* Icon color */
+}
+
+.skills-list li p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.skills-list li:hover {
+  color: #28a745;
+}
+
+.skills-list li:hover i {
+  color: #28a745;
+}
