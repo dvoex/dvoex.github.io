@@ -85,91 +85,103 @@ h2 {
 }
 
 /* Skills Section */
+.skills-heading {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #8e44ad, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Skills List Styling */
 .skills-list ul {
     list-style: none;
-    display: flex; /* Use flex for horizontal layout */
-    flex-wrap: wrap; /* Ensure items wrap when necessary */
-    justify-content: center; /* Centers the items horizontally */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding: 0;
     margin: 0 auto;
-    max-width: 1200px; /* Ensuring max width on large screens */
+    max-width: 1200px;
 }
 
 .skills-list li {
     display: flex;
     flex-direction: column; /* Stack the icon and text vertically */
-    align-items: center; /* Centers content horizontally */
-    justify-content: center; /* Centers content vertically */
+    align-items: center;
+    justify-content: center;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px; /* Adjust padding for better spacing */
+    padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
-    width: 220px; /* Set a consistent width */
-    height: 180px; /* Ensure each card has the same height */
-    text-align: center; /* Centers the text */
-    opacity: 0; /* Initially hidden for scroll animation */
-    transform: translateY(30px); /* Moves items slightly down */
-    animation: slideIn 0.6s ease-out forwards; /* Slide-in animation */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 220px; /* Consistent width */
+    height: 200px; /* Ensure each item has consistent height */
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 0.6s ease-out forwards;
 }
 
-/* Icon and Text Inside Each Skill Card */
 .skills-list li i {
     color: #3498db;
-    margin-bottom: 10px; /* Adds space between icon and text */
-    font-size: 2.5rem; /* Increased icon size for better visibility */
+    margin-bottom: 15px; /* Spacing between icon and text */
+    font-size: 2.5rem;
 }
 
-.skills-list li span {
-    display: flex;
-    flex-direction: column; /* Stack the icon and text vertically */
-    align-items: center; /* Centers content horizontally */
-    justify-content: center; /* Centers content vertically */
+.skills-list li strong {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px; /* Spacing between the title and description */
 }
 
-/* Hover effect for each item */
+.skills-list li p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Hover effect */
 .skills-list li:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    transform: translateY(-10px); /* Lifts the item on hover */
+    transform: translateY(-10px);
 }
 
-/* Animation when the item comes into view */
+/* Slide-in animation */
 @keyframes slideIn {
     to {
         opacity: 1;
-        transform: translateY(0); /* Moves the item back to its original position */
+        transform: translateY(0);
     }
 }
 
-/* Media Queries for Mobile First Design */
+/* Media Queries */
 @media (max-width: 768px) {
     .skills-list ul {
         justify-content: flex-start; /* Align items to the left for smaller screens */
     }
 
     .skills-list li {
-        padding: 15px;
         width: 180px; /* Adjust width on smaller screens */
-        height: 160px; /* Adjust height on smaller screens */
-        font-size: 1rem; /* Adjust font size */
+        height: 180px;
     }
 }
 
 @media (max-width: 480px) {
     .skills-list ul {
-        justify-content: center; /* Centers items on smaller screens */
+        justify-content: center; /* Center items on very small screens */
     }
 
     .skills-list li {
-        width: 160px; /* Adjust width on very small screens */
-        height: 140px; /* Adjust height on very small screens */
-        font-size: 0.9rem; /* Adjust font size for mobile */
+        width: 160px; /* Adjust width */
+        height: 160px;
     }
 
     .skills-list i {
-        font-size: 2rem; /* Adjust icon size for mobile visibility */
+        font-size: 2rem;
     }
 }
 
