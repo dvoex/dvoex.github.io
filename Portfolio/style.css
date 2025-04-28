@@ -81,3 +81,31 @@ html {
 .email-badge:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 8px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+
+.project-button i {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.project-button:hover i {
+  transform: translateX(5px);
+}
