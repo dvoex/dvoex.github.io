@@ -202,6 +202,11 @@ h2 {
     .skills-list li p {
         font-size: 0.85rem;
     }
+    .skills-list li:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 }
 
 /* Certifications Section */
