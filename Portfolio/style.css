@@ -116,11 +116,11 @@ h2 {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 15px;
+    padding: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    width: 200px;
-    height: 220px;
+    width: 160px; /* smaller box */
+    height: 180px; /* smaller box */
     text-align: center;
     opacity: 0;
     transform: translateY(30px);
@@ -129,18 +129,18 @@ h2 {
 
 .skills-list li i {
     color: #3498db;
-    font-size: 2.5rem; /* Smaller than before */
-    margin-bottom: 10px;
-}
-
-.skills-list li strong {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1rem; /* Much smaller on desktop */
     margin-bottom: 8px;
 }
 
+.skills-list li strong {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
 .skills-list li p {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: #666;
 }
 
@@ -165,12 +165,12 @@ h2 {
     }
 
     .skills-list li {
-        width: 180px;
-        height: 200px;
+        width: 140px;
+        height: 160px;
     }
 
     .skills-list li i {
-        font-size: 2.2rem;
+        font-size: 0.5rem; /* Tiny icon for tablet */
     }
 }
 
@@ -180,20 +180,20 @@ h2 {
     }
 
     .skills-list li {
-        width: 150px;
-        height: 180px;
+        width: 120px;
+        height: 140px;
     }
 
     .skills-list li i {
-        font-size: 2rem;
+        font-size: 0.3rem; /* Very tiny icon for mobile */
     }
 
     .skills-list li strong {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .skills-list li p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 }
 
