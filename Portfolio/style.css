@@ -110,7 +110,7 @@ h2 {
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -118,19 +118,25 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 250px;
+    min-height: 200px;
 }
 
 .skills-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background-color: #3498db; /* Change background on hover for added effect */
 }
 
 .skills-item i {
-    font-size: 3.5rem;
+    font-size: 4rem; /* Bigger icons for more impact */
     color: #3498db;
     margin-bottom: 20px;
     transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skills-item:hover i {
+    color: #fff; /* Icon color change on hover */
+    transform: scale(1.2); /* Scale up icon */
 }
 
 .skills-item h3 {
@@ -146,15 +152,14 @@ h2 {
     color: #7f8c8d;
     font-size: 1.1rem;
     line-height: 1.5;
+    transition: color 0.3s ease;
 }
 
-/* Hover effects for the skill icons */
-.skills-item:hover i {
-    color: #8e44ad;
-    transform: scale(1.15);
+.skills-item:hover p {
+    color: #fff; /* Text color change on hover */
 }
 
-/* Small accent at the bottom */
+/* Small accent at the bottom of each skill card */
 .skills-item::after {
     content: '';
     position: absolute;
