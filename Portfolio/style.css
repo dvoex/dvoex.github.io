@@ -1,185 +1,118 @@
-.nav-menu {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 1.1rem;
-  background-color: #ffffff;
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-.nav-menu li a {
-  text-decoration: none;
-  color: #333;
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease-in-out;
-  position: relative;
+h1, h2 {
+    color: #333;
 }
 
-.nav-menu li a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
-  transition: width 0.3s ease-in-out;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.nav-menu li a:hover::after {
-  width: 100%;
+a:hover {
+    text-decoration: underline;
 }
 
-.nav-menu li a:hover {
-  color: #2575fc;
-}
-nav {
-  background-color: #ffffff;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+/* Header Styles */
+header {
+    background-color: #2575fc;
+    padding: 40px 0;
+    text-align: center;
 }
 
+.header-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4em;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navbar Styles */
 .navbar {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
+    margin-top: 20px;
 }
 
-.navbar li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s ease;
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
 }
 
-.navbar li a:hover {
-  color: #0073e6; /* LinkedIn blue or your theme color */
-}
-html {
-  scroll-behavior: smooth;
-}
-.email-badge {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff; /* Blue color */
-  color: white;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+.navbar li {
+    margin: 0 20px;
 }
 
-.email-badge:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-}
-.project-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 20px;
-  margin-top: 8px;
-  background-color: #28a745;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  overflow: hidden;
+.navbar a {
+    font-size: 1.2em;
+    color: #fff;
+    padding: 8px 16px;
+    transition: color 0.3s;
 }
 
-.project-button i {
-  margin-right: 8px;
-  transition: transform 0.3s ease;
+.navbar a:hover {
+    color: #6a11cb;
 }
 
-.project-button:hover {
-  background-color: #218838;
-  transform: translateY(-2px);
+/* Section Styles */
+.section {
+    padding: 40px;
+    text-align: center;
 }
 
-.project-button:hover i {
-  transform: translateX(5px);
-}
-.resume-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #007bff; /* Blue */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-top: 8px;
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.resume-button i {
-  margin-right: 8px;
-  transition: transform 0.3s ease;
+p {
+    font-size: 1.1em;
+    line-height: 1.5;
 }
 
-.resume-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  transform: translateY(-2px);
+/* Project & Certifications Button Styles */
+.project-button, .resume-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #2575fc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
 }
 
-.resume-button:hover i {
-  transform: translateX(5px);
-}
-#skills {
-  margin-top: 50px;
-  text-align: center;
+.project-button:hover, .resume-button:hover {
+    background-color: #6a11cb;
 }
 
-.skills-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+.project-button i, .resume-button i {
+    margin-right: 8px;
 }
 
-.skills-list ul {
-  list-style: none;
-  padding: 0;
+/* Certifications Card Styles */
+.cert-card {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.skills-list li {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  margin: 10px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.skills-list li i {
-  margin-bottom: 10px;
-  font-size: 30px;
-  color: #007bff; /* Icon color */
-}
-
-.skills-list li p {
-  font-size: 14px;
-  color: #555;
-  margin-top: 5px;
-  text-align: center;
-}
-
-.skills-list li:hover {
-  color: #28a745;
-}
-
-.skills-list li:hover i {
-  color: #28a745;
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
