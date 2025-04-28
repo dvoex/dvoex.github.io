@@ -76,37 +76,68 @@ h2 {
     margin-bottom: 30px;
 }
 
-/* Skills Section */
-.skills-list ul {
-    list-style: none;
+/* Technical Skills Section */
+.skills-section {
+    padding: 60px 20px;
+    background-color: #f4f6f9;
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.skills-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px;
     padding: 0;
     margin: 0 auto;
+    max-width: 1200px;
 }
 
-.skills-list li {
-    display: flex;
-    align-items: center;
+.skills-item {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 230px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.skills-list li:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+.skills-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
-.skills-list i {
-    font-size: 2.5rem;
+.skills-item i {
+    font-size: 3rem;
     color: #3498db;
-    margin-right: 15px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.skills-item h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.skills-item p {
+    color: #7f8c8d;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Hover effect for skill icon */
+.skills-item:hover i {
+    color: #8e44ad;
 }
 
 /* Certifications Section */
@@ -176,7 +207,7 @@ footer {
     }
 
     /* Skills section with more compact grid on smaller screens */
-    .skills-list ul {
+    .skills-list {
         grid-template-columns: repeat(2, 1fr);  /* Two items per row */
     }
 
@@ -188,7 +219,7 @@ footer {
 
 @media (max-width: 768px) {
     /* Skills and certifications grid on mobile */
-    .skills-list ul,
+    .skills-list,
     .certifications-list {
         grid-template-columns: 1fr; /* Single column for mobile */
     }
@@ -228,5 +259,10 @@ footer {
     .project-button, .resume-button, .email-badge {
         padding: 8px 15px;
         font-size: 1rem;
+    }
+
+    /* Skills section title size */
+    .skills-title {
+        font-size: 1.6rem;
     }
 }
