@@ -189,9 +189,9 @@ title: "David O. A's Portfolio"
 
         skillsItems.forEach(item => {
             if (isElementInViewport(item)) {
-                item.classList.add('hovered');
+                item.classList.add('hovered', 'animate');
             } else {
-                item.classList.remove('hovered');
+                item.classList.remove('hovered', 'animate');
             }
         });
     }
