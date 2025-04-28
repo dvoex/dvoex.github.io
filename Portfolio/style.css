@@ -98,8 +98,9 @@ h2 {
 
 .skills-list li {
     display: flex;
+    flex-direction: column; /* Stack the icon and text vertically */
     align-items: center;
-    justify-content: center; /* Ensures content is centered */
+    justify-content: center; /* Centers the content inside the card */
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -108,20 +109,17 @@ h2 {
     transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
     width: 200px; /* Fixed width to keep them consistent */
     height: 120px; /* Ensures consistent height for each skill item */
-    justify-content: center;
-    text-align: center; /* Centers text horizontally */
-    font-size: 1.1rem;
     opacity: 0; /* Initially hidden for the scroll effect */
     transform: translateY(30px); /* Moves items slightly down */
     animation: slideIn 0.6s ease-out forwards; /* Slide-in animation */
+    text-align: center; /* Centers text horizontally */
 }
 
-/* Ensuring text inside each skill card is vertically centered */
 .skills-list li span {
     display: flex;
     flex-direction: column; /* Stack icon and text vertically */
-    justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
     text-align: center;
 }
 
