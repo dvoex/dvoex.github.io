@@ -145,10 +145,16 @@ h2 {
     line-height: 1.4;
 }
 
-/* Hover Effect */
+/* This will trigger automatically when "hovered" class is added */
 .skills-list li.hovered {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    transform: translateY(-10px);
+    opacity: 1; /* make sure opacity is 1 */
+    transform: translateY(-10px); /* rise up */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: smoother entry if you want */
+.skills-list li.hovered.animate {
+    transition: transform 0.6s ease, box-shadow 0.6s ease, opacity 0.6s ease;
 }
 
 /* Slide-in Animation */
