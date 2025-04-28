@@ -1,0 +1,174 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 20px 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #2575fc;
+    border-radius: 5px;
+}
+
+/* Section Styling */
+.section {
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Skills section */
+.skills-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.skills-list i {
+    margin-right: 10px;
+    color: #2575fc;
+}
+
+/* Certifications and Links styling */
+.certifications-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cert-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+    transition: box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cert-card a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.cert-card a:hover {
+    color: #1e5cda;
+}
+
+/* Buttons - Resume, View Credential, Mail Me */
+.project-button, .credential-button, .resume-button, .email-badge {
+    display: inline-block;
+    background-color: #2575fc;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.project-button:hover, .credential-button:hover, .resume-button:hover, .email-badge:hover {
+    background-color: #1e5cda;
+    transform: translateY(-3px);
+}
+
+.project-button:active, .credential-button:active, .resume-button:active, .email-badge:active {
+    transform: translateY(0);
+}
+
+.project-button:focus, .credential-button:focus, .resume-button:focus, .email-badge:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.5);
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #333;
+}
+
+footer strong {
+    font-weight: bold;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .skills-list li {
+        text-align: center;
+    }
+
+    .certifications-list {
+        padding: 0 15px;
+    }
+}
