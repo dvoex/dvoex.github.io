@@ -87,14 +87,13 @@ h2 {
 /* Skills Section */
 .skills-list ul {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjusted to ensure items are responsive */
+    display: flex; /* Changed to flex for horizontal layout */
+    flex-wrap: wrap; /* Ensures the items wrap onto new lines if needed */
+    justify-content: center; /* Centers the items horizontally */
     gap: 20px;
-    justify-items: center;
     padding: 0;
     margin: 0 auto;
     max-width: 1200px; /* Ensuring max width on large screens */
-    transition: all 0.3s ease; /* Smooth transitions for hover effects */
 }
 
 .skills-list li {
@@ -105,17 +104,21 @@ h2 {
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 250px;
-    min-height: 120px; /* Ensures consistent height for each skill item */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+    width: 200px; /* Fixed width to keep them consistent */
+    height: 120px; /* Ensures consistent height for each skill item */
     justify-content: center;
     text-align: center;
     font-size: 1.1rem;
+    opacity: 0; /* Initially hidden for the scroll effect */
+    transform: translateY(30px); /* Moves items slightly down */
+    animation: slideIn 0.6s ease-out forwards; /* Slide-in animation */
 }
 
+/* Hover effect for each item */
 .skills-list li:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px); /* Lifts the item on hover */
 }
 
 .skills-list i {
@@ -124,25 +127,34 @@ h2 {
     font-size: 2rem; /* Increased icon size for better visibility */
 }
 
+/* Animation when the item comes into view */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Moves the item back to its original position */
+    }
+}
+
 /* Media Queries for Mobile First Design */
 @media (max-width: 768px) {
     .skills-list ul {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ensuring the grid is not too cramped */
+        justify-content: flex-start; /* Align items to the left for smaller screens */
     }
 
     .skills-list li {
         padding: 15px;
-        min-height: 100px; /* Adjust height on smaller screens */
+        height: 100px; /* Adjust height on smaller screens */
+        font-size: 1rem; /* Adjust font size */
     }
 }
 
 @media (max-width: 480px) {
     .skills-list ul {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
+        justify-content: center; /* Centers items on smaller screens */
     }
 
     .skills-list li {
-        min-height: 100px;
+        height: 100px;
         font-size: 1rem; /* Reduced font size for better mobile view */
         padding: 10px;
     }
