@@ -109,3 +109,30 @@ html {
 .project-button:hover i {
   transform: translateX(5px);
 }
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 8px;
+}
+
+.resume-button i {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+.resume-button:hover i {
+  transform: translateX(5px);
+}
