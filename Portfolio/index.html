@@ -158,25 +158,8 @@ title: "David O. A's Portfolio"
     <footer>
         <p><strong>MADE BY David O. A</strong></p>
     </footer>
+    
     <script>
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return rect.top >= 0 && rect.bottom <= window.innerHeight;
-    }
-
-    window.addEventListener('scroll', function () {
-        const skillsItems = document.querySelectorAll('.skills-list li');
-        
-        skillsItems.forEach(item => {
-            if (isElementInViewport(item)) {
-                item.classList.add('hovered');
-            } else {
-                item.classList.remove('hovered');
-            }
-        });
-    });
-</script>
-<script>
     function isElementInViewport(el) {
         const rect = el.getBoundingClientRect();
         return (
