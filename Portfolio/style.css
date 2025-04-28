@@ -101,7 +101,7 @@ h2 {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Distribute items evenly */
+    justify-content: center;
     gap: 20px;
     padding: 0;
     margin: 0 auto;
@@ -110,17 +110,17 @@ h2 {
 
 .skills-list li {
     display: flex;
-    flex-direction: column; /* Stack icon and text vertically */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    width: 220px; /* Set width to ensure consistent size */
-    height: 250px; /* Set height for consistent appearance */
+    width: 200px;
+    height: 220px;
     text-align: center;
     opacity: 0;
     transform: translateY(30px);
@@ -129,22 +129,22 @@ h2 {
 
 .skills-list li i {
     color: #3498db;
-    font-size: 3rem; /* Larger icon size for better visibility */
-    margin-bottom: 15px; /* Space between the icon and text */
+    font-size: 2.5rem; /* Smaller than before */
+    margin-bottom: 10px;
 }
 
 .skills-list li strong {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 10px; /* Space between title and description */
+    margin-bottom: 8px;
 }
 
 .skills-list li p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #666;
 }
 
-/* Hover Effect for Skills */
+/* Hover Effect */
 .skills-list li.hovered {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     transform: translateY(-10px);
@@ -158,62 +158,44 @@ h2 {
     }
 }
 
-/* Media Queries for Mobile Responsiveness */
+/* Media Queries */
 @media (max-width: 768px) {
     .skills-list ul {
-        justify-content: flex-start; /* Align items to the left */
+        justify-content: center;
     }
 
     .skills-list li {
-        width: 200px; /* Adjust width for smaller screens */
-        height: 230px;
+        width: 180px;
+        height: 200px;
+    }
+
+    .skills-list li i {
+        font-size: 2.2rem;
     }
 }
 
 @media (max-width: 480px) {
     .skills-list ul {
-        justify-content: center; /* Center items on smaller screens */
+        justify-content: center;
     }
 
     .skills-list li {
-        width: 160px; /* Adjust width for smaller mobile screens */
-        height: 190px;
+        width: 150px;
+        height: 180px;
     }
 
-    .skills-list i {
-        font-size: 2.2rem; /* Adjust icon size on mobile */
+    .skills-list li i {
+        font-size: 2rem;
     }
 
     .skills-list li strong {
-        font-size: 1rem; /* Adjust title size */
+        font-size: 1rem;
     }
 
     .skills-list li p {
-        font-size: 0.9rem; /* Adjust description size */
+        font-size: 0.85rem;
     }
 }
-
-/* JavaScript to Add Hover on Scroll */
-<script>
-    // Check if the skill items are in the viewport
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return rect.top >= 0 && rect.bottom <= window.innerHeight;
-    }
-
-    // Add 'hovered' class when element comes into view
-    window.addEventListener('scroll', function () {
-        const skillsItems = document.querySelectorAll('.skills-list li');
-        
-        skillsItems.forEach(item => {
-            if (isElementInViewport(item)) {
-                item.classList.add('hovered');
-            } else {
-                item.classList.remove('hovered');
-            }
-        });
-    });
-</script>
 
 /* Certifications Section */
 .certifications-list {
