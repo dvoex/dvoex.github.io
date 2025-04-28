@@ -1,154 +1,98 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+/* Reset some default styling */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and general settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Header Styles */
-header {
-    background-color: #2575fc;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.header-title {
-    font-family: 'Poppins', sans-serif;
-    font-size: 4em;
-    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Navbar Styles */
-.navbar {
-    margin-top: 20px;
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-}
-
-.navbar li {
-    margin: 0 20px;
-}
-
-.navbar a {
-    font-size: 1.2em;
-    color: #fff;
-    padding: 8px 16px;
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #6a11cb;
-}
-
-/* Section Styles */
-.section {
-    padding: 40px;
-    text-align: center;
+    line-height: 1.6;
 }
 
 h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
+    color: #2575fc;
 }
 
-p {
-    font-size: 1.1em;
-    line-height: 1.5;
+/* Header title styling */
+.header-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-top: 50px;
 }
 
-/* Project & Certifications Button Styles */
-.project-button, .resume-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: #2575fc;
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
     transition: background-color 0.3s;
 }
 
-.project-button:hover, .resume-button:hover {
-    background-color: #6a11cb;
+.navbar a:hover {
+    background-color: #2575fc;
+    border-radius: 5px;
 }
 
-.project-button i, .resume-button i {
-    margin-right: 8px;
+/* Project & Certification Buttons */
+.project-button, .credential-button, .resume-button {
+    display: inline-block;
+    background-color: #2575fc;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
 }
 
-/* Certifications Card Styles */
-.cert-card {
-    background: #fff;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+.project-button:hover, .credential-button:hover, .resume-button:hover {
+    background-color: #1e5cda;
+    transform: translateY(-3px);
 }
 
-/* Footer Styles */
+.project-button:active, .credential-button:active, .resume-button:active {
+    transform: translateY(0);
+}
+
+.project-button:focus, .credential-button:focus, .resume-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.5);
+}
+
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
     text-align: center;
+    margin-top: 50px;
+    font-size: 1rem;
+    color: #333;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .header-title {
-        font-size: 2.5em; /* Adjust header size for mobile */
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    .navbar li {
-        margin: 10px 0;
-    }
-
-    .section {
-        padding: 20px;
-    }
-
-    .skills-list ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .project-button, .resume-button {
-        width: 100%;
-        text-align: center;
-    }
-
-    .cert-card {
-        margin: 10px 0;
-        padding: 15px;
-    }
+footer strong {
+    font-weight: bold;
 }
+
+/* Link and button styling */
+.email-badge {
+   
