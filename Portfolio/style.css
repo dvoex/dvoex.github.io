@@ -120,7 +120,7 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     width: 220px; /* Consistent width */
-    height: 200px; /* Ensure each item has consistent height */
+    height: 230px; /* Ensures consistent height */
     text-align: center;
     opacity: 0;
     transform: translateY(30px);
@@ -130,7 +130,9 @@ h2 {
 .skills-list li i {
     color: #3498db;
     margin-bottom: 15px; /* Spacing between icon and text */
-    font-size: 2.5rem;
+    font-size: 3rem; /* Larger icon for better visibility */
+    display: block; /* Ensure icon is treated as a block element */
+    margin-bottom: 20px; /* Space between icon and text */
 }
 
 .skills-list li strong {
@@ -165,8 +167,8 @@ h2 {
     }
 
     .skills-list li {
-        width: 180px; /* Adjust width on smaller screens */
-        height: 180px;
+        width: 200px; /* Adjust width on smaller screens */
+        height: 210px;
     }
 }
 
@@ -181,7 +183,7 @@ h2 {
     }
 
     .skills-list i {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 }
 
