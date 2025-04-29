@@ -84,7 +84,11 @@ h2 {
     margin: 0 auto 30px;
 }
 
-/* Skills Section Heading */
+/* ===========================
+   Skills Section Styling
+   =========================== */
+
+/* Section Heading */
 .skills-heading {
     font-size: 2.5rem;
     color: #2c3e50;
@@ -96,66 +100,73 @@ h2 {
     -webkit-text-fill-color: transparent;
 }
 
-/* Skills List Styling */
+/* Skills List Container */
 .skills-list ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; /* More space between cards */
+    gap: 30px; /* space between skill cards */
     padding: 0;
     margin: 0 auto;
     max-width: 1200px;
 }
 
+/* Individual Skill Card */
 .skills-list li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* So content flows top to bottom */
+    justify-content: flex-start;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px 15px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    width: 220px; /* Bigger box */
-    height: 280px; /* Taller box */
+    width: 220px;
+    height: 280px;
     text-align: center;
     opacity: 0;
     transform: translateY(30px);
     animation: slideIn 0.6s ease-out forwards;
 }
 
+/* Skill Icon */
 .skills-list li i {
     color: #3498db;
     font-size: 1rem;
     margin-bottom: 12px;
 }
 
+/* Skill Title */
 .skills-list li strong {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
+/* Skill Description */
 .skills-list li p {
     font-size: 1rem;
     color: #666;
     line-height: 1.4;
 }
+
+/* Hover Effect */
 .skills-list li:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
-/* This will trigger automatically when "hovered" class is added */
+
+/* Activated Animation Style */
 .skills-list li.hovered {
-    opacity: 1; /* make sure opacity is 1 */
-    transform: translateY(-10px); /* rise up */
+    opacity: 1;
+    transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Optional: smoother entry if you want */
+/* Optional smoother transition for .hovered.animate */
 .skills-list li.hovered.animate {
     transition: transform 0.6s ease, box-shadow 0.6s ease, opacity 0.6s ease;
 }
@@ -168,6 +179,11 @@ h2 {
     }
 }
 
+/* ===========================
+   Responsive Styles
+   =========================== */
+
+/* Tablet (≤768px) */
 @media (max-width: 768px) {
     .skills-list ul {
         justify-content: center;
@@ -183,19 +199,20 @@ h2 {
     }
 }
 
+/* Mobile (≤480px) */
 @media (max-width: 480px) {
     .skills-list ul {
         justify-content: center;
-        padding: 0 10px; /* extra padding for mobile screens */
+        padding: 0 10px;
     }
 
     .skills-list li {
-        width: 160px;
+        width: 45%; /* two per row */
         height: 220px;
     }
 
     .skills-list li i {
-        font-size: 0.3rem;
+        font-size: 1.2rem; /* larger for mobile */
     }
 
     .skills-list li strong {
@@ -205,10 +222,11 @@ h2 {
     .skills-list li p {
         font-size: 0.85rem;
     }
+
     .skills-list li:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transform: translateY(-15px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 }
 
