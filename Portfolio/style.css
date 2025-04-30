@@ -167,18 +167,6 @@ h2 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Activated Animation Style */
-.skills-list li.hovered {
-    opacity: 1;
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Optional smoother transition for .hovered.animate */
-.skills-list li.hovered.animate {
-    transition: transform 0.6s ease, box-shadow 0.6s ease, opacity 0.6s ease;
-}
-
 /* Slide-in Animation */
 @keyframes slideIn {
     to {
