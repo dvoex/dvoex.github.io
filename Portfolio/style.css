@@ -70,6 +70,7 @@ header {
     text-align: center;
 }
 
+/* Updated h2 Styling for Centering */
 h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
@@ -78,6 +79,9 @@ h2 {
     background: linear-gradient(90deg, #8e44ad, #3498db);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* About and Skills Sections */
@@ -95,13 +99,15 @@ h2 {
 /* Section Heading */
 .skills-heading {
     font-size: 2.5rem;
-    color: #2c3e50;
     margin-bottom: 40px;
     font-weight: bold;
     text-align: center;
     background: linear-gradient(90deg, #8e44ad, #3498db);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Skills List Container */
@@ -193,55 +199,54 @@ h2 {
 
 /* Tablet (≤768px) */
 @media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
     .skills-list ul {
-        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .skills-list li {
-        width: 200px;
-        height: 260px;
+    .certifications-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .skills-list li i {
-        font-size: 0.5rem;
+    .cert-card {
+        padding: 15px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2.2rem;
     }
 }
 
 /* Mobile (≤480px) */
 @media (max-width: 480px) {
-    .skills-list ul {
-        justify-content: center;
-        padding: 0 10px;
+    .header-title {
+        font-size: 2rem;
     }
 
-    .skills-list li {
-        width: 45%;
-        min-height: auto;
-        padding: 10px 8px;
-        box-sizing: border-box;
-        word-wrap: break-word;
-        overflow-wrap: anywhere;
-        hyphens: auto;
-    }
-
-    .skills-list li i {
+    .navbar a {
         font-size: 1rem;
     }
 
-    .skills-list li strong {
-        font-size: 0.9rem;
-        line-height: 1.4;
+    h2 {
+        font-size: 2rem;
     }
 
-    .skills-list li p {
-        font-size: 0.8rem;
-        line-height: 1.5;
+    .skills-list ul {
+        grid-template-columns: 1fr;
     }
 
-    .skills-list li:hover {
-        transform: translateY(-15px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .certifications-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-button, .credential-button, .resume-button, .email-badge {
+        font-size: 1rem;
+        padding: 10px 20px;
     }
 }
 
@@ -317,52 +322,4 @@ footer {
 
 footer strong {
     font-weight: 600;
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    .skills-list ul {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .certifications-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cert-card {
-        padding: 15px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-title {
-        font-size: 2rem;
-    }
-
-    .navbar a {
-        font-size: 1rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    .skills-list ul {
-        grid-template-columns: 1fr;
-    }
-
-    .certifications-list {
-        grid-template-columns: 1fr;
-    }
-
-    .project-button, .credential-button, .resume-button, .email-badge {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
 }
