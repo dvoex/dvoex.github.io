@@ -122,6 +122,7 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px 15px;
+    box-sizing: border-box;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     width: 220px;
@@ -130,6 +131,8 @@ h2 {
     opacity: 0;
     transform: translateY(30px);
     animation: slideIn 0.6s ease-out forwards;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Skill Icon */
@@ -208,11 +211,15 @@ h2 {
 
     .skills-list li {
         width: 45%; /* two per row */
-        height: 220px;
+        min-height: 220px; /* flexible height */
+        padding: 15px 10px;
+        box-sizing: border-box;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .skills-list li i {
-        font-size: 1.2rem; /* larger for mobile */
+        font-size: 1.2rem;
     }
 
     .skills-list li strong {
