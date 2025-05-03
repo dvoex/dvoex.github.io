@@ -60,9 +60,9 @@ header {
     color: #3498db;
 }
 
-/* Section Styling */
+/* Section Styling - Updated padding to reduce space between sections */
 .section {
-    padding: 80px 20px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
